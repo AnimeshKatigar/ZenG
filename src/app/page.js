@@ -1,5 +1,6 @@
 "use client"
-import ProductCard from "@/components/ProductCard";
+import PrimaryBtn from "@/components/PrimaryBtn";
+import ProductCard from "@/components/ProductCard.jsx";
 import Image from "next/image";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className="">
+    <main className="no-scrollbar">
       <div className="bg-gray-700 flex flex-col h-[80vh] items-center justify-between p-24 lg:flex-row">
         <h1 className="uppercase text-[100px] text-black w-1/2">
           For the Genz
@@ -40,6 +41,7 @@ export default function Home() {
             />
           ))}
         </div>
+        <PrimaryBtn customClasses="w-fit mx-auto my-4 text-center"/>
       </div>
     </main>
   );
