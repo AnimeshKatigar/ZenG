@@ -33,28 +33,3 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-.productImage-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
-
-.productImage-hover:hover {
-  opacity: 1;
-}
-
-.productImage-hover:hover .viewBtn{
-  animation: btnAnimation 0.5s ease-in;
-}
-
-@keyframes btnAnimation {
-  from{
-    transform: translateY(-10px);
-  }
-  to{
-    transform: translateY(0px);
-  }
-}

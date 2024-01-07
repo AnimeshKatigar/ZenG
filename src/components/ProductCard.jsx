@@ -6,23 +6,23 @@ const ProductCard = ({ title, price }) => {
     <div>
       <div className="relative cursor-pointer">
         <Image
-          src="https://images.pexels.com/photos/5878807/pexels-photo-5878807.jpeg"
+          src="https://images.pexels.com/photos/5878803/pexels-photo-5878803.jpeg"
           class="productImage"
           width={350}
           height={350}
           alt="image"
         />
-        <div className="productImage-hover">
-          <div className="absolute flex bottom-[2%] pl-3 gap-x-3">
+        <div className="productImage-hover overflow-clip">
+          <div className="absolute flex bottom-[2%] pl-3 gap-x-3 z-10">
             <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
-              Quick view
+              <span className="w-full text-center">Quick view</span>
             </div>
             <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
-              Quick Shop
+              <span className="w-full text-center">Quick Shop</span>
             </div>
           </div>
           <Image
-            src="https://images.pexels.com/photos/5878803/pexels-photo-5878803.jpeg"
+            src="https://images.pexels.com/photos/5878807/pexels-photo-5878807.jpeg"
             className=""
             width={350}
             height={350}
