@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        GothamLight:["Gotham-Light"],
+        GothamMedium:["Gotham-Medium"],
+        GothamBold:["Gotham-Bold"],
+        GothamBlack:["Gotham-Black"]
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

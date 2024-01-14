@@ -4,6 +4,36 @@
 
 @import "../styles/components.css";
 
+@layer base{
+  @font-face {
+    font-family: Gotham-Light;
+    src: url(../../public/assets/font/Gotham-Light.otf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Gotham-Medium;
+    src: url(../../public/assets/font/GothamMedium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  } @font-face {
+    font-family: Gotham-Bold;
+    src: url(../../public/assets/font/GothamBold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Gotham-Black;
+    src: url(../../public/assets/font/Gotham-Black.otf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
 /* Scrollbar */
 
 ::-webkit-scrollbar-thumb {

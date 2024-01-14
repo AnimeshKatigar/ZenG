@@ -12,8 +12,8 @@ const ProductCard = ({ title, price }) => {
           height={350}
           alt="image"
         />
-        <div className="productImage-hover overflow-clip">
-          <div className="absolute flex bottom-[2%] pl-3 gap-x-3 z-10">
+        <div className="productImage-hover overflow-clip font-GothamLight">
+          <div className="absolute flex bottom-[2%] justify-center gap-x-2 w-full z-10">
             <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
               <span className="w-full text-center">Quick view</span>
             </div>
@@ -30,8 +30,8 @@ const ProductCard = ({ title, price }) => {
           />
         </div>
       </div>
-      <h4>{title}</h4>
-      <p className="text-black/60">₹ {price}</p>
+      <h4 className="font-GothamBlack text-sm">{title}</h4>
+      <p className="font-GothamBlack text-sm text-black/60">₹ {price}</p>
     </div>
   );
 };
