@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import QuickView from "./Modals/QuickView";
+import QuickShop from "./Modals/QuickShop";
 
-const ProductCard = ({ title, price }) => {
+const ProductCard = ({ title, price, singlePhoto = false }) => {
   return (
     <div>
       <div className="relative cursor-pointer">
@@ -14,9 +15,18 @@ const ProductCard = ({ title, price }) => {
         />
         <div className="productImage-hover overflow-clip font-GothamLight">
           <div className="absolute flex bottom-[2%] justify-center gap-x-2 w-full z-10">
-            <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
-              <span className="w-full text-center">Quick view</span>
-            </div>
+            <QuickView
+              dialogTriggerComponent={() => (
+                <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
+                  <span className="w-full text-center">Quick view</span>
+                </div>
+              )}
+              dialogCloseComponent={()=>(
+                <button>
+                  Close
+                </button>
+              )}
+            />
             <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
               <span className="w-full text-center">Quick Shop</span>
             </div>
