@@ -4,64 +4,46 @@
 
 @import "../styles/components.css";
 
-/* Burger menu animation */
+@layer base {
+    @font-face {
+        font-family: Gotham-Light;
+        src: url(../../public/assets/font/Gotham-Light.otf) format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
 
-.burger {
-    position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-    display: block;
+    @font-face {
+        font-family: Gotham-Medium;
+        src: url(../../public/assets/font/GothamMedium.ttf) format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Gotham-Bold;
+        src: url(../../public/assets/font/GothamBold.ttf) format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Gotham-Black;
+        src: url(../../public/assets/font/Gotham-Black.otf) format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+    }
 }
 
-.burger input {
-    display: none;
+.navbar-bg {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(100px);
 }
 
-.burger span , .burger-open span{
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: black;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-.burger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
-}
-
-.burger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center;
-}
-
-.burger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%);
-}
-
-.burger.burger-open span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px;
-}
-
-.burger.burger-open span:nth-of-type(2) {
-    width: 0%;
-    opacity: 0;
-}
-
-.burger.burger-open span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
+.navbar-darkBg {
+    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(64px)
 }

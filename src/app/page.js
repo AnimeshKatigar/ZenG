@@ -26,11 +26,11 @@ export default function Home() {
   ];
   return (
     <main className="no-scrollbar">
-      <Reveal>
+      <Reveal customInitial={{opacity:0}} customFinal={{opacity:1}}>
         <Image
           src={ClawRingImage}
           alt="Ring-Image"
-          className="w-full object-cover h-[80vh]"
+          className="w-full object-cover"
         />
       </Reveal>
       {/* <h1 className="uppercase text-[100px] text-black w-1/2 font-GothamBlack">

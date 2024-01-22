@@ -1,21 +1,29 @@
 import { motion } from "framer-motion";
 
-export default function Reveal({ delay, children }) {
+export default function Reveal({
+  delay,
+  children,
+  customInitial = null,
+  customFinal = null,
+}) {
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0, translateY: 90 },
-        visible: { opacity: 1, translateY: 0 },
-      }}
+      initial={customInitial ?? { opacity: 0, translateY: 90 }}
+      whileInView={customFinal ?? { opacity: 1, translateY: 0 }}
+      viewport={{ once: true }}
+      // transition={{ duration: 1, type: "tween" }}
+      // variants={{
+      //   hidden: { opacity: 0, translateY: 90 },
+      //   visible: { opacity: 1, translateY: 0 },
+      // }}
       transition={{
-        type: "spring",
-        duration: 0.2,
-        damping: 28,
+        type: "tween",
+        duration: 0.5,
         delay: delay ?? 0.1,
-        stiffness: 100,
+        ease: "easeOut",
       }}
-      initial="hidden"
-      animate="visible"
+      // initial="hidden"
+      // animate="visible"
     >
       {children}
     </motion.div>
