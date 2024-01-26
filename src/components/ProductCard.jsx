@@ -1,19 +1,19 @@
 import Image from "next/image";
-import QuickView from "./Modals/QuickView";
-import QuickShop from "./Modals/QuickShop";
+import QuickView from "./Layovers/QuickView";
+import QuickShop from "./Layovers/QuickShop";
 
-const ProductCard = ({ title, price, singlePhoto = false }) => {
+const ProductCard = ({ singlePhoto = false, details }) => {
   return (
     <div>
-      <div className="relative cursor-pointer">
-        <Image
+      <div className="relative cursor-pointer ">
+        {!singlePhoto && <Image
           src="https://images.pexels.com/photos/5878803/pexels-photo-5878803.jpeg"
-          class="productImage"
+          className="productImage min-h-[120px] min-w-[120px] aspect-square"
           width={350}
           height={350}
           alt="image"
-        />
-        <div className="productImage-hover overflow-clip font-GothamLight">
+        />}
+        <div className={`${!singlePhoto ? "productImage-hover" : "singleProductImage"} overflow-clip font-GothamLight`}>
           <div className="absolute flex bottom-[2%] justify-center gap-x-2 w-full z-10">
             <QuickView
               dialogTriggerComponent={() => (
@@ -21,6 +21,7 @@ const ProductCard = ({ title, price, singlePhoto = false }) => {
                   <span className="w-full text-center">Quick view</span>
                 </div>
               )}
+              data={details}
               dialogCloseComponent={()=>(
                 <button>
                   Close
@@ -33,15 +34,18 @@ const ProductCard = ({ title, price, singlePhoto = false }) => {
           </div>
           <Image
             src="https://images.pexels.com/photos/5878807/pexels-photo-5878807.jpeg"
-            className=""
+            className="min-h-[120px] min-w-[120px] aspect-square"
             width={350}
             height={350}
             alt="image"
           />
         </div>
       </div>
-      <h4 className="font-GothamBlack text-sm">{title}</h4>
-      <p className="font-GothamBlack text-sm text-black/60">₹ {price}</p>
+      <div className="my-2">
+
+      <h4 className="font-GothamBlack text-sm mb-0.5">{details.title}</h4>
+      <p className="font-GothamMedium text-sm text-black/60">₹ {details.price}</p>
+      </div>
     </div>
   );
 };

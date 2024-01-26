@@ -92,19 +92,27 @@
     transition: all 0.5s ease-out;
   }
   
-  .productImage-hover:hover {
+  .productImage-hover:hover, .singleProductImage:hover .viewBtn{
     opacity: 1;
   }
 
-  .productImage-hover:hover img{
+  .productImage-hover:hover img, .singleProductImage:hover img{
     transform: scale(1.15);
     transition: all 0.7s ease;
   }
-  
-  .productImage-hover:hover .viewBtn{
+ 
+  .singleProductImage .viewBtn{
+    opacity: 0;
+    transition: all 0.5s ease-out;
+
+  }
+
+  .productImage-hover:hover .viewBtn, .singleProductImage:hover .viewBtn{
     animation: btnAnimation 0.5s ease-in;
   }
   
+
+  /* Quick Actions button */
   .viewBtn {
     margin: 0;
     font-family: inherit;

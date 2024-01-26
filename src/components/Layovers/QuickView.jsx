@@ -24,6 +24,7 @@ import {
 
 export default function QuickView({
   dialogTriggerComponent,
+  data,
   dialogCloseComponent,
 }) {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -45,28 +46,18 @@ export default function QuickView({
   return (
     <Dialog>
       <DialogTrigger asChild>{dialogTriggerComponent()}</DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-[60vw] max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Share link</DialogTitle>
           <DialogDescription>
             Anyone who has this link will be able to view this.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex items-center space-x-2">
-          <div className="grid flex-1 gap-2">
-            <label htmlFor="link" className="sr-only">
-              Link
-            </label>
-            <input
-              id="link"
-              defaultValue="https://ui.shadcn.com/docs/installation"
-              readOnly
-            />
-          </div>
-          <button type="submit" size="sm" className="px-3">
-            <span className="sr-only">Copy</span>
-          </button>
-        </div>
+        <div
+          className="product-description-html-dev font-GothamLight text-base"
+          dangerouslySetInnerHTML={{ __html: data?.html }}
+        />
+
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>{dialogCloseComponent()}</DialogClose>
         </DialogFooter>
