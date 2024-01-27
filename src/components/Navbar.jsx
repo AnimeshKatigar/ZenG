@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link
             key={val.path}
             href={val.path}
-            className={`text-white ${checkActiveRoute(val.path) && "border-b"}`}
+            className={`text-white hover:border-b transition-all ${checkActiveRoute(val.path) && "border-b"}`}
           >
             {val.label}
           </Link>

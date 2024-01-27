@@ -4,13 +4,13 @@ import QuickShop from "./Layovers/QuickShop";
 
 const ProductCard = ({ singlePhoto = false, details }) => {
   return (
-    <div>
+    <div className="">
       <div className="relative cursor-pointer ">
         {!singlePhoto && <Image
-          src="https://images.pexels.com/photos/5878803/pexels-photo-5878803.jpeg"
-          className="productImage min-h-[120px] min-w-[120px] aspect-square"
-          width={350}
-          height={350}
+          src={details?.img}
+          className="productImage  aspect-square"
+          // width={350}
+          // height={350}
           alt="image"
         />}
         <div className={`${!singlePhoto ? "productImage-hover" : "singleProductImage"} overflow-clip font-GothamLight`}>
@@ -33,15 +33,13 @@ const ProductCard = ({ singlePhoto = false, details }) => {
             </div>
           </div>
           <Image
-            src="https://images.pexels.com/photos/5878807/pexels-photo-5878807.jpeg"
-            className="min-h-[120px] min-w-[120px] aspect-square"
-            width={350}
-            height={350}
+            src={singlePhoto ? details.img :details?.variants?.[0]?.img}
+            className="w-full aspect-square object-fit"
             alt="image"
           />
         </div>
       </div>
-      <div className="my-2">
+      <div className="my-2 w-[320px]">
 
       <h4 className="font-GothamBlack text-sm mb-0.5">{details.title}</h4>
       <p className="font-GothamMedium text-sm text-black/60">₹ {details.price}</p>

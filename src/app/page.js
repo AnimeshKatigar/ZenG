@@ -1,17 +1,16 @@
-"use client";
-import PrimaryBtn from "@/components/PrimaryBtn";
-import ProductCard from "@/components/ProductCard.jsx";
+"use client"
 import Image from "next/image";
-import ClawRingImage from "../../public/assets/images/OwlRing.png";
+import LandingPage from "../../public/assets/images/LandingPage.png";
 import Reveal from "@/components/Reveal";
 import BestSellers from "@/components/Sections/BestSellers";
+import NewDrops from "@/components/Sections/NewDrops";
 
 export default function Home() {
   return (
     <main className="no-scrollbar">
       <Reveal customInitial={{opacity:0}} customFinal={{opacity:1}}>
         <Image
-          src={ClawRingImage}
+          src={LandingPage}
           alt="Ring-Image"
           className="w-full object-cover"
         />
@@ -23,6 +22,7 @@ export default function Home() {
       {/* </div> */}
       <div className="px-[5%] md:px-[10%] w-full py-8">
         <BestSellers/>
+        <NewDrops/>
       </div>
     </main>
   );

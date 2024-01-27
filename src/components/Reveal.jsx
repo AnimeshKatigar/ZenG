@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Reveal({
   delay,
+  customClassName="",
   children,
   customInitial = null,
   customFinal = null,
@@ -22,6 +23,7 @@ export default function Reveal({
         delay: delay ?? 0.1,
         ease: "easeOut",
       }}
+      className={customClassName}
       // initial="hidden"
       // animate="visible"
     >
