@@ -21,6 +21,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import Image from "next/image";
 
 export default function QuickView({
   dialogTriggerComponent,
@@ -46,21 +47,24 @@ export default function QuickView({
   return (
     <Dialog>
       <DialogTrigger asChild>{dialogTriggerComponent()}</DialogTrigger>
-      <DialogContent className="sm:max-w-[60vw] max-h-[80vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>Share link</DialogTitle>
-          <DialogDescription>
-            Anyone who has this link will be able to view this.
-          </DialogDescription>
-        </DialogHeader>
-        <div
-          className="product-description-html-dev font-GothamLight text-base"
-          dangerouslySetInnerHTML={{ __html: data?.html }}
-        />
+      <DialogContent className=" sm:max-w-[60vw] max-h-[80vh] overflow-y-auto lg:flex p-0 outline-none border-none rounded-none">
+        <Image src={data?.img} alt="product-img" className="w-1/2" />
+        <div className="overflow-y-auto p-2 ">
+          <DialogHeader>
+            <DialogTitle className="font-GothamBlack text-lg w-[95%]">{data?.title}</DialogTitle>
+            <DialogDescription>
+              Anyone who has this link will be able to view this.
+            </DialogDescription>
+          </DialogHeader>
+          <div
+            className="product-description-html-dev font-GothamLight text-base"
+            dangerouslySetInnerHTML={{ __html: data?.html }}
+          />
 
-        <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>{dialogCloseComponent()}</DialogClose>
-        </DialogFooter>
+          <DialogFooter className="sm:justify-start">
+            <DialogClose asChild>{dialogCloseComponent()}</DialogClose>
+          </DialogFooter>
+        </div>
       </DialogContent>
     </Dialog>
   );

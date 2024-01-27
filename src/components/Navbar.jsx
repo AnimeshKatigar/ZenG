@@ -13,6 +13,19 @@ import CartMenu from "./Layovers/CartMenu";
 const Navbar = () => {
   const pathname = usePathname();
   const [burgerMenuToggle, setBurgerMenuToggle] = useState(false);
+
+  function extractRoutePrefix(fullRoute) {
+    // Find the index of the second "/" in the route
+    let secondSlashIndex = fullRoute.indexOf('/', fullRoute.indexOf('/') + 1);
+  
+    // Extract the route prefix
+    let routePrefix = secondSlashIndex !== -1
+      ? fullRoute.substring(0, secondSlashIndex)
+      : fullRoute;
+  
+    return routePrefix;
+  }
+
   const navbarVariants = {
     visible: {
       y: 0,
@@ -21,13 +34,15 @@ const Navbar = () => {
     },
     hidden: { y: "-100%", opacity: 0 },
   };
+
   const routes = [
+    { label: "Home", path: "/" },
     { label: "Shop", path: "/shop" },
     { label: "Collections", path: "/collections" },
   ];
 
   const checkActiveRoute = (path) => {
-    return pathname.includes(path);
+    return pathname===extractRoutePrefix(path);
   };
 
   return (
@@ -35,7 +50,7 @@ const Navbar = () => {
       // animate="visible"
       // variants={navbarVariants}
       // initial="hidden"
-      className={`md:justify-between navbar-darkBg px-[3rem] flex items-center sm:py-[1rem] sm:max-lg:py-3 max-lg:px-[1.25rem] max-sm:py-1 max-sm:h-[56px] fixed w-screen z-[5] top-0 font-GothamMedium h-[70px]`}
+      className={`md:justify-between navbar-darkBg px-[3rem] flex items-center sm:py-[1rem] sm:max-lg:py-3 max-lg:px-[1.25rem] max-sm:py-1 max-sm:h-[56px] fixed w-screen z-30 top-0 font-GothamMedium h-[70px]`}
     >
       <div className="md:hidden">
         <Hamburger
@@ -54,7 +69,7 @@ const Navbar = () => {
           <Link
             key={val.path}
             href={val.path}
-            className={`text-white hover:border-b transition-all ${checkActiveRoute(val.path) && "border-b"}`}
+            className={`hover:text-white hover:border-b transition-all ${checkActiveRoute(val.path) ? "border-b text-white" : "text-white/60"}`}
           >
             {val.label}
           </Link>

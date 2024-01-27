@@ -18,15 +18,12 @@ const CartMenu = ({ triggerComponent, closeComponent }) => {
         <SheetTrigger asChild>{triggerComponent()}</SheetTrigger>
         <SheetContent className="shadow-2xl ">
           <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
-            <SheetDescription>
-              Make changes to your profile here. Click save when you&apos;re
-              done.
-            </SheetDescription>
+            <SheetTitle className="font-GothamMedium text-lg">Shopping Cart</SheetTitle>
           </SheetHeader>
-          <div className="flex">
-            <div className="grid grid-cols-4 items-center gap-4">Name</div>
-            <div className="grid grid-cols-4 items-center gap-4">Username</div>
+          <div className="flex w-[80%] justify-between border border-[#141414] divide-x divide-[#141414]">
+            <div className="">Home</div>
+            <div className="">Name</div>
+            <div className="">Username</div>
           </div>
           <SheetFooter>
             <SheetClose asChild>{closeComponent()}</SheetClose>
