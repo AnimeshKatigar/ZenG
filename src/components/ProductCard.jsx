@@ -8,7 +8,7 @@ const ProductCard = ({ singlePhoto = false, details }) => {
       <div className="relative cursor-pointer hover:shadow-xl">
         {!singlePhoto && (
           <Image
-            src={details?.img}
+            src={details?.variants ? details.variants?.[0].img : details?.img}
             className="productImage aspect-square"
             // width={350}
             // height={350}
@@ -20,28 +20,34 @@ const ProductCard = ({ singlePhoto = false, details }) => {
             !singlePhoto ? "productImage-hover" : "singleProductImage"
           } overflow-clip font-GothamLight`}
         >
-          <div className="absolute flex bottom-[2%] justify-center gap-x-2 w-full z-10">
+          <div className="absolute flex bottom-[4%] justify-center gap-x-2 w-full z-10">
             <QuickView
               dialogTriggerComponent={() => (
-                <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
-                  <span className="w-full text-center">Quick view</span>
+                <div className="rounded-full bg-black text-white px-3 viewBtn whitespace-nowrap flex h-8 items-center text-[14px] font-GothamLight">
+                  <span className="w-full text-center mb-0.5">Quick view</span>
                 </div>
               )}
               data={details}
               dialogCloseComponent={() => <button>Close</button>}
             />
-            <div className="rounded-full bg-black text-white px-4 py-2 viewBtn">
-              <span className="w-full text-center">Quick Shop</span>
-            </div>
+            <QuickView
+              dialogTriggerComponent={() => (
+                <div className="rounded-full bg-black text-white px-3 viewBtn whitespace-nowrap flex h-8 items-center text-[14px] font-GothamLight">
+                  <span className="w-full text-center mb-0.5">Quick Shop</span>
+                </div>
+              )}
+              data={details}
+              dialogCloseComponent={() => <button>Close</button>}
+            />
           </div>
           <Image
-            src={singlePhoto ? details.img : details?.variants?.[0]?.img}
+            src={details?.variants ? details.variants?.[details.variants.length-1].img : details?.img}
             className="w-full aspect-square object-fit"
             alt="image"
           />
         </div>
       </div>
-      <div className="my-4 w-[320px]">
+      <div className="my-4">
         <h4 className="font-GothamBlack text-sm mb-0.5">{details.title}</h4>
         <p className="font-GothamMedium text-sm text-black/60">
           ₹ {details.price}

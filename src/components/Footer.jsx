@@ -75,7 +75,7 @@ const Footer = () => {
               onClick={handleSubmit}
               className="flex aspect-square h-full items-center justify-center rounded-xl bg-[#2D2D2D] text-white transition-all hover:bg-neutral-800 disabled:bg-[#797878]"
             >
-              <svg viewBox="0 0 16 6" ariaHidden="true" className="w-4">
+              <svg viewBox="0 0 16 6" className="w-4">
                 <path
                   fill="currentColor"
                   fillRule="evenodd"

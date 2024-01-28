@@ -2,6 +2,7 @@ import Reveal from "../Reveal";
 import ProductCard from "../ProductCard";
 import PrimaryBtn from "../PrimaryBtn";
 import bestSellerProducts from "../../../public/data/bestSellers.js";
+import Link from "next/link"; 
 
 const BestSellers = () => {
   return (
@@ -11,7 +12,7 @@ const BestSellers = () => {
           BestSellers
         </h2>
       </Reveal>
-      <div className="flex gap-x-4 items-center overflow-x-auto no-scrollbar">
+      <div className="flex gap-x-4 items-start overflow-x-auto no-scrollbar">
         {bestSellerProducts.map((product, i) => (
           <Reveal customClassName="min-w-[320px] w-1/3" key={product.title} delay={0.05 * (i + 1)}>
             <ProductCard
@@ -22,7 +23,9 @@ const BestSellers = () => {
         ))}
       </div>
       <Reveal>
+        <Link href="/shop">
         <PrimaryBtn customClasses="w-fit mx-auto my-4 text-center" />
+        </Link>
       </Reveal>
     </div>
   );
