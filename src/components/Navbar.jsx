@@ -42,7 +42,7 @@ const Navbar = () => {
   ];
 
   const checkActiveRoute = (path) => {
-    return pathname===extractRoutePrefix(path);
+    return extractRoutePrefix(pathname)===path;
   };
 
   return (
