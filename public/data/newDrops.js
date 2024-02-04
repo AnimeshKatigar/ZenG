@@ -4,6 +4,7 @@ import EyeBallRing from "../assets/images/EyeBallRing.png";
 
 const newDrops = [
   {
+    _id:"p9",
     title: "Owl & Eagle Duo Ring - Wisdom Meets Soaring Strength",
     price: "449",
     sizes: ["20"],
@@ -14,6 +15,7 @@ const newDrops = [
       "Embrace the duality of wisdom and strength with the Owl & Eagle Duo Ring. Elevate your style with this symbolic piece that pays homage to the magnificent qualities of two iconic birds. Order your Owl & Eagle Duo Ring now and carry the essence of both creatures with you wherever you go",
   },
   {
+    _id:"p4",
     title: "Hoot Ring - Whimsical Elegance in Every Note",
     description:
       "Capture the charm of the night with our Hoot Ring, a whimsical accessory that echoes the enchanting melody of an owl's hoot. This delightful ring features a carefully crafted owl perched at its center, exuding a sense of playfulness and timeless elegance.",
@@ -23,6 +25,7 @@ const newDrops = [
     img: BigOwlRing,
   },
   {
+    _id:"p6",
     title: "Eyeball Ring - Unleash the Gaze of Mystique",
     price: "299",
     img: EyeBallRing,

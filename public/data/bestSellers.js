@@ -7,6 +7,7 @@ import YellowOwlRing from "../assets/images/YellowOwlRing.png";
 
 const bestSellers = [
   {
+    _id:"p1",
     title: "Crystal Band - Timeless Sparkle and Elegance",
     description:
       "Step into a world of timeless sparkle and elegance with our Crystal Band, a versatile and sophisticated accessory that effortlessly complements any style. This classic yet enchanting ring features a continuous band adorned with brilliant crystals, creating a captivating play of light and a touch of refined glamour.",
@@ -17,6 +18,7 @@ const bestSellers = [
     img: CrystalRing,
   },
   {
+    _id:"p2",
     title: "Viper's One-Eyed Ring - A Unique and Mysterious Accessory",
     price: "350",
     description:
@@ -26,6 +28,7 @@ const bestSellers = [
     img: GreenEyeRing,
   },
   {
+    _id:"p3",
     title: "Owl Ring - Symbolic Elegance and Wise Beauty",
     price: "250",
     description:

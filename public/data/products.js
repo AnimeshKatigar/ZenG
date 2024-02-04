@@ -16,6 +16,7 @@ import EyeBallRing from "../assets/images/EyeBallRing.png";
 
 const products = [
   {
+    _id:"p1",
     title: "Crystal Band - Timeless Sparkle and Elegance",
     description:
       "Step into a world of timeless sparkle and elegance with our Crystal Band, a versatile and sophisticated accessory that effortlessly complements any style. This classic yet enchanting ring features a continuous band adorned with brilliant crystals, creating a captivating play of light and a touch of refined glamour.",
@@ -26,6 +27,7 @@ const products = [
     img: CrystalRing,
   },
   {
+    _id:"p2",
     title: "Viper's One-Eyed Ring - A Unique and Mysterious Accessory",
     price: "350",
     description:
@@ -35,6 +37,7 @@ const products = [
     img: GreenEyeRing,
   },
   {
+    _id:"p3",
     title: "Owl Ring - Symbolic Elegance and Wise Beauty",
     price: "250",
     description:
@@ -62,6 +65,7 @@ const products = [
     ],
   },
   {
+    _id:"p4",
     title: "Hoot Ring - Whimsical Elegance in Every Note",
     description:
       "Capture the charm of the night with our Hoot Ring, a whimsical accessory that echoes the enchanting melody of an owl's hoot. This delightful ring features a carefully crafted owl perched at its center, exuding a sense of playfulness and timeless elegance.",
@@ -71,6 +75,7 @@ const products = [
     img: BigOwlRing,
   },
   {
+    _id:"p5",
     title: "Claw Ring - Embrace the Fierce Elegance of Nature",
     price: "249",
     img: ClawRing,
@@ -80,6 +85,7 @@ const products = [
       "Make a statement that echoes the power of the wild with the Claw Ring. Transform your style with this fierce and elegant piece that captures the essence of untamed nature. Order your Claw Ring today and embrace the bold allure it brings to your personal style.",
   },
   {
+    _id:"p6",
     title: "Eyeball Ring - Unleash the Gaze of Mystique",
     price: "299",
     img: EyeBallRing,
@@ -90,6 +96,7 @@ const products = [
       "Embrace the allure of mystique with the Eyeball Ring. Make a bold statement and let your style speak volumes. Order your Eyeball Ring now and step into a realm where the unconventional meets the extraordinary.",
   },
   {
+    _id:"p7",
     title: "Phoenix Bird Ring - Symbol of Rebirth and Timeless Beauty",
     price: "249",
     img: FlyingBirdRing,
@@ -99,6 +106,7 @@ const products = [
       "Embrace the mythical aura and let the Phoenix Bird Ring be a testament to your strength and renewal. Elevate your style with this symbolic piece that transcends trends and tells a story. Order your Phoenix Bird Ring now and embody the timeless allure of the legendary phoenix.",
   },
   {
+    _id:"p8",
     title: "Icy Ring - Frost-Kissed Elegance for the Modern Explorer",
     price: "349",
     sizes: ["20", "21"],
@@ -109,6 +117,7 @@ const products = [
       "Elevate your style with the cool sophistication of the Icy Ring. Embrace the beauty of winter with this chic and timeless piece that adds a touch of frosty enchantment to your jewelry collection. Order your Icy Ring now and let your style sparkle with the magic of icy landscapes.",
   },
   {
+    _id:"p9",
     title: "Owl & Eagle Duo Ring - Wisdom Meets Soaring Strength",
     price: "449",
     sizes: ["20"],
@@ -119,6 +128,7 @@ const products = [
       "Embrace the duality of wisdom and strength with the Owl & Eagle Duo Ring. Elevate your style with this symbolic piece that pays homage to the magnificent qualities of two iconic birds. Order your Owl & Eagle Duo Ring now and carry the essence of both creatures with you wherever you go",
   },
   {
+    _id:"p10",
     title: "Falcon Face Ring - Majestic Precision in Every Detail",
     price: "249",
     sizes: ["20"],
@@ -130,6 +140,7 @@ const products = [
       "Elevate your style with the Falcon Face Ring, a testament to the precision and majesty of the falcon. Make a bold statement with this powerful piece that resonates with the spirit of the wild. Order your Falcon Face Ring today and embrace the untamed beauty it brings to your personal style.",
   },
   {
+    _id:"p11",
     title:
       "Crystal Eye Matte Snake Ring - Serpentine Elegance with Mystic Allure",
     price: "249",
@@ -152,6 +163,7 @@ const products = [
     ],
   },
   {
+    _id:"p12",
     title: "Matte Black Nail Ring - Edgy Elegance for the Modern Trendsetter",
     price: "249",
     // sizes: ["20"],
