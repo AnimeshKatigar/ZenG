@@ -67,7 +67,7 @@ const Footer = () => {
             autoComplete="email"
             className="py-4 pl-4 pr-10 w-full focus:outline  focus:outline-white/60 transition-all text-sm font-GothamLight text-white bg-black"
           />
-          <div class="absolute inset-y-1 right-1 flex justify-end">
+          <div className="absolute inset-y-1 right-1 flex justify-end">
             <button
               type="submit"
               aria-label="Submit"
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
           <div className="w-1/3 px-2 text-left text-white">
             <h3>About Us</h3>
-            <p className="text-justify italics font-GothamLight mt-3 text-white/70">
+            <p className="text-justify italics font-GothamLight mt-3 text-white/60">
               &quot;Hey there, welcome to ZenG - where style meets GenZ vibes!
               We&apos;re all about crafting jewelry that&apos;s as chill as it
               is chic. Inspired by nature and modern vibes, our pieces are like
