@@ -89,14 +89,14 @@ const Footer = () => {
         {errors?.email?.message && (
           <p className="text-red">{errors?.email?.message}</p>
         )}
-        <div className="flex gap-x-4 px-[5%] border-t border-white/10 mt-8 pt-4 justify-around">
-          <div className="w-1/3 px-2 text-left flex flex-col gap-3 text-white/70 font-GothamLight">
+        <div className="md:flex gap-x-4 px-[5%] border-t border-white/10 mt-8 pt-4 justify-around">
+          <div className="w-1/3 px-2 text-left flex flex-col gap-3 text-white/70 font-GothamLight my-3 md:my-0">
             <h3 className="text-white">Just in Case</h3>
             {informaticDocs.map((val) => (
               <Link
                 key={val.path}
                 href={val.path}
-                className="hover:text-white hover:border-b transition-all text-white/60 w-fit"
+                className="hover:text-white transition-all text-white/60 w-fit"
               >
                 {val.label}
               </Link>
