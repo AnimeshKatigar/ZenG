@@ -10,7 +10,7 @@ export default function Page({ params }) {
     <main className="pt-20 pb-10 px-[5%] md:px-[10%] w-full">
       <Reveal customClassName="my-8 flex justify-between px-2 items-center">
         <h2 className="text-black text-2xl uppercase  font-GothamBlack">
-          SHOP ALL
+          {params.slug}
         </h2>
         <p className="text-black/60 text-base font-GothamMedium">
           {products?.length} Products
@@ -18,7 +18,7 @@ export default function Page({ params }) {
       </Reveal>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-1">
         {products.map((product, i) => (
-          <Reveal customClassName="" key={product.title} delay={0.05 * (i + 1)}>
+          <Reveal key={product._id} delay={0.05 * (i + 1)}>
             <ProductCard
               details={product}
               singlePhoto={product?.variants ? false : true}

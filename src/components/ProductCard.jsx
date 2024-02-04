@@ -1,10 +1,11 @@
 import Image from "next/image";
 import QuickView from "./Layovers/QuickView";
 import QuickShop from "./Layovers/QuickShop";
+import Link from "next/link";
 
 const ProductCard = ({ singlePhoto = false, details }) => {
   return (
-    <div className="p-2">
+    <Link className="p-2" href={`/products/${details?._id}`}>
       <div className="relative cursor-pointer hover:shadow-xl">
         {!singlePhoto && (
           <Image
@@ -53,7 +54,7 @@ const ProductCard = ({ singlePhoto = false, details }) => {
           ₹ {details.price}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
