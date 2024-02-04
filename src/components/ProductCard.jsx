@@ -4,17 +4,20 @@ import QuickShop from "./Layovers/QuickShop";
 import Link from "next/link";
 
 const ProductCard = ({ singlePhoto = false, details }) => {
+  const link = `/products/${details?._id}`;
   return (
-    <Link className="p-2" href={`/products/${details?._id}`}>
-      <div className="relative cursor-pointer hover:shadow-xl">
+    <div className="p-2 group">
+      <div className="relative cursor-pointer hover:shadow-xl ">
         {!singlePhoto && (
-          <Image
-            src={details?.variants ? details.variants?.[0].img : details?.img}
-            className="productImage aspect-square"
-            // width={350}
-            // height={350}
-            alt="image"
-          />
+          <Link href={link}>
+            <Image
+              src={details?.variants ? details.variants?.[0].img : details?.img}
+              className="productImage aspect-square"
+              // width={350}
+              // height={350}
+              alt="image"
+            />
+          </Link>
         )}
         <div
           className={`${
@@ -41,20 +44,30 @@ const ProductCard = ({ singlePhoto = false, details }) => {
               dialogCloseComponent={() => <button>Close</button>}
             />
           </div>
-          <Image
-            src={details?.variants ? details.variants?.[details.variants.length-1].img : details?.img}
-            className="w-full aspect-square object-fit"
-            alt="image"
-          />
+          <Link href={link}>
+            <Image
+              src={
+                details?.variants
+                  ? details.variants?.[details.variants.length - 1].img
+                  : details?.img
+              }
+              className="w-full aspect-square object-fit"
+              alt="image"
+            />
+          </Link>
         </div>
       </div>
-      <div className="my-4">
-        <h4 className="font-GothamBlack text-sm mb-0.5">{details.title}</h4>
-        <p className="font-GothamMedium text-sm text-black/60">
-          ₹ {details.price}
-        </p>
-      </div>
-    </Link>
+      <Link href={link}>
+        <div className="my-4">
+          <h4 className="font-GothamBlack text-sm mb-0.5 group-hover:underline underline-offset-2">
+            {details.title}
+          </h4>
+          <p className="font-GothamMedium text-sm text-black/60">
+            ₹ {details.price}
+          </p>
+        </div>
+      </Link>
+    </div>
   );
 };
 
