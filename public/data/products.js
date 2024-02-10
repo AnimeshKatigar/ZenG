@@ -13,6 +13,7 @@ import MatteBlackSnakeRedRing from "../assets/images/MatteBlackSnakeRedRing.png"
 import MatteBlackSnakeGreenRing from "../assets/images/MatteBlackSnakeGreenRing.png";
 import NailRing from "../assets/images/NailRing.png";
 import EyeBallRing from "../assets/images/EyeBallRing.png";
+import IcyRing from "../assets/images/IcyRing.png";
 
 const products = [
   {
@@ -110,7 +111,7 @@ const products = [
     title: "Icy Ring - Frost-Kissed Elegance for the Modern Explorer",
     price: "349",
     sizes: ["20", "21"],
-    img: FlyingBirdRing,
+    img: IcyRing,
     description:
       "Embrace the allure of frost-kissed elegance with our Icy Ring, a mesmerizing accessory that captures the essence of winter's enchantment. This unique ring features a crystalline centerpiece that radiates a cool, icy brilliance, adding a touch of sophistication to your style.",
     extraInformation:

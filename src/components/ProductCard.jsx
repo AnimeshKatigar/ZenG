@@ -6,9 +6,9 @@ import Link from "next/link";
 const ProductCard = ({ singlePhoto = false, details }) => {
   const link = `/products/${details?._id}`;
   return (
-    <div className="p-2 group">
+    <div className="p-2 ">
       <div className="relative cursor-pointer hover:shadow-xl ">
-        {!singlePhoto && (
+        {/* {!singlePhoto && (
           <Link href={link}>
             <Image
               src={details?.variants ? details.variants?.[0].img : details?.img}
@@ -18,10 +18,11 @@ const ProductCard = ({ singlePhoto = false, details }) => {
               alt="image"
             />
           </Link>
-        )}
+        )} */}
         <div
           className={`${
-            !singlePhoto ? "productImage-hover" : "singleProductImage"
+            "singleProductImage"
+            // !singlePhoto ? "productImage-hover" : "singleProductImage"
           } overflow-clip font-GothamLight`}
         >
           <div className="absolute flex bottom-[4%] justify-center gap-x-2 w-full z-10">
@@ -48,8 +49,9 @@ const ProductCard = ({ singlePhoto = false, details }) => {
             <Image
               src={
                 details?.variants
-                  ? details.variants?.[details.variants.length - 1].img
-                  : details?.img
+                  ? details.variants?.[0].img
+                  : // ? details.variants?.[details.variants.length - 1].img
+                    details?.img
               }
               className="w-full aspect-square object-fit"
               alt="image"
@@ -59,9 +61,7 @@ const ProductCard = ({ singlePhoto = false, details }) => {
       </div>
       <Link href={link}>
         <div className="my-4">
-          <h4 className="font-GothamBlack text-sm mb-0.5 group-hover:underline underline-offset-2">
-            {details.title}
-          </h4>
+          <h4 className="font-GothamBlack text-sm mb-0.5">{details.title}</h4>
           <p className="font-GothamMedium text-sm text-black/60">
             ₹ {details.price}
           </p>
