@@ -24,6 +24,7 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import QuantityBtn from "../QuantityBtn";
+import Link from "next/link";
 
 export default function QuickView({
   dialogTriggerComponent,
@@ -62,6 +63,9 @@ export default function QuickView({
     data?.variants ? 0 : null
   );
   const [count, setCount] = useState(1);
+
+  const link = `/products/${data?._id}`;
+
   if (!isDesktop)
     return (
       <Drawer>
@@ -143,9 +147,12 @@ export default function QuickView({
           {/* <DialogFooter className="sm:justify-start">
             <DialogClose asChild>{dialogCloseComponent()}</DialogClose>
           </DialogFooter> */}
-          <div className="py-3 border-t border-black/10 font-GothamLight hover:underline underline-offset-2 text-black/85 hover:text-black cursor-pointer transition-all">
+          <Link
+            href={link}
+            className="py-3 border-t border-black/10 font-GothamLight hover:underline underline-offset-2 text-black/85 hover:text-black cursor-pointer transition-all"
+          >
             View all details -&gt;
-          </div>
+          </Link>
         </div>
       </DialogContent>
     </Dialog>
